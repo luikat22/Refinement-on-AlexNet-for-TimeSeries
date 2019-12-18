@@ -1,0 +1,46 @@
+{
+    "PATH": {
+        "root_directory": "/Users/wingkatlui/Documents/AlexNetForTimeSeriesClassification"
+    },
+
+    "ARCHIVE": {
+        "archive_name": "TSC",
+        "data_name_list": [
+            "50words", "Adiac", "ArrowHead", "Beef", "BeetleFly", "BirdChicken", "Car", "CBF",
+            "ChlorineConcentration", "CinC_ECG_torso", "Coffee",
+            "Computers", "Cricket_X", "Cricket_Y", "Cricket_Z", "DiatomSizeReduction",
+            "DistalPhalanxOutlineAgeGroup", "DistalPhalanxOutlineCorrect", "DistalPhalanxTW",
+            "Earthquakes", "ECG200", "ECG5000", "ECGFiveDays", "ElectricDevices", "FaceAll", "FaceFour"]
+    },
+
+    "INCEPTION_MODEL": {
+        "Train": {
+            "num_of_Inception_modules": 5,
+            "default_params": {
+                "verbose": false,
+                "build": true, 
+                "batch_size": 64,
+                "nb_filters": 32, 
+                "use_residual": true, 
+                "use_bottleneck": true, 
+                "depth": 6, 
+                "kernel_size": 41, 
+                "nb_epochs": 1500
+            }
+        },
+
+        "HyperParameter_test": {
+            "batch_size": [16, 32, 128],
+            "use_bottleneck": [false],
+            "use_residual": [false],
+            "nb_filters": [16, 64],
+            "depth": [3, 9],
+            "kernel_size": [8, 64]
+        }
+    },
+
+    "DATA_AUGMENTATION": {
+        "sample_dataset": "InlineSkate"
+    }
+
+}
